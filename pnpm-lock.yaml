@@ -8,6 +8,7 @@ importers:
       '@changesets/cli': ^2.23.1
       '@template-node-tsup/build': '*'
       '@template-node-tsup/entry': '*'
+      '@template-node-tsup/play': '*'
       '@template-node-tsup/runtime': '*'
       '@template-node-tsup/utils': '*'
       '@types/chalk': ^2.2.0
@@ -34,6 +35,7 @@ importers:
       '@changesets/cli': 2.24.4
       '@template-node-tsup/build': link:build
       '@template-node-tsup/entry': link:packages/entry
+      '@template-node-tsup/play': link:play
       '@template-node-tsup/runtime': link:packages/runtime
       '@template-node-tsup/utils': link:utils
       '@types/chalk': 2.2.0
@@ -74,6 +76,12 @@ importers:
       '@template-node-tsup/utils': '*'
     devDependencies:
       '@template-node-tsup/utils': link:../../utils
+
+  play:
+    specifiers:
+      '@template-node-tsup/entry': '*'
+    devDependencies:
+      '@template-node-tsup/entry': link:../packages/entry
 
   utils:
     specifiers:
