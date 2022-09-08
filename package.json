@@ -64,7 +64,6 @@
     "bumpp": "^8.2.1",
     "conventional-changelog-cli": "^2.2.2",
     "cross-env": "^7.0.3",
-    "esbuild-plugin-resolve": "^1.0.3",
     "eslint": "^8.18.0",
     "esno": "^0.16.3",
     "pnpm": "^6.3.0",

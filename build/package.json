@@ -8,7 +8,7 @@
   "keywords": [],
   "scripts": {
     "build:split": "cross-env BUILD_MODE=split tsup-node --config index.ts",
-    "build:all": "cross-env BUILD_MODE=all tsup-node --config index.ts",
+    "build:all": "cross-env BUILD_MODE=all tsup --config index.ts",
     "clean": "rimraf dist"
   },
   "devDependencies": {

@@ -17,7 +17,6 @@ importers:
       chalk: 4.1.2
       conventional-changelog-cli: ^2.2.2
       cross-env: ^7.0.3
-      esbuild-plugin-resolve: ^1.0.3
       eslint: ^8.18.0
       esno: ^0.16.3
       fs-extra: ^10.0.1
@@ -43,7 +42,6 @@ importers:
       bumpp: 8.2.1
       conventional-changelog-cli: 2.2.2
       cross-env: 7.0.3
-      esbuild-plugin-resolve: 1.0.3
       eslint: 8.23.0
       esno: 0.16.3
       pnpm: 6.34.0
@@ -1660,10 +1658,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /esbuild-plugin-resolve/1.0.3:
-    resolution: {integrity: sha512-DHtwExowoWa5rC+mLVppGqe4MiFCZsKEeNgps4UAOKqmu3CjUgyyFjw+AHXteGCRdCJID76OsUuyGi2cOLIxUQ==}
-    dev: true
 
   /esbuild-sunos-64/0.15.7:
     resolution: {integrity: sha512-8CDI1aL/ts0mDGbWzjEOGKXnU7p3rDzggHSBtVryQzkSOsjCHRVe0iFYUuhczlxU1R3LN/E7HgUO4NXzGGP/Ag==}

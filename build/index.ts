@@ -1,6 +1,5 @@
 import { defineConfig } from 'tsup'
 import * as process from "process";
-import resolve from 'esbuild-plugin-resolve';
 let entry = {}
 const buildMode = process.env.BUILD_MODE
 const baseConfig = {
@@ -16,7 +15,7 @@ const configOptions = []
 // All scripts are packaged to the same file
 if(buildMode === 'all'){
   baseConfig.entry = {
-    index: '../packages/index.ts',
+    index: '../packages/entry/index.ts',
   }
   configOptions.push(baseConfig)
 }
@@ -30,7 +29,7 @@ if(buildMode === 'split'){
   }
   for (let entryKey in entry) {
     const config = JSON.parse(JSON.stringify(baseConfig))
-    config.entry[entryKey] = entry[entryKey]
+    config.entry = [entry[entryKey]]
     config.outDir = entryKey === 'index' ? './dist' : `./dist/${entryKey}`
 
     configOptions.push(config)
