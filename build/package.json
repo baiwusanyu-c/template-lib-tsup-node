@@ -1,0 +1,20 @@
+{
+  "name": "@template-node-tsup/build",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "build:split": "cross-env BUILD_MODE=split tsup-node --config index.ts",
+    "build:all": "cross-env BUILD_MODE=all tsup-node --config index.ts",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@template-node-tsup/entry": "*",
+    "tsup": "^6.2.3",
+    "cross-env": "^7.0.3",
+    "rimraf": "^3.0.2"
+  }
+}
