@@ -18,7 +18,9 @@
   },
   "include": [
     "/packages/**/*.ts",
-    "/utils/**/*.ts"
+    "/utils/**/*.ts",
+    "/build/**/*.ts",
+    "/build/utils.ts"
   ],
   // ts 排除的文件
   "exclude": ["node_modules", "**/__tests__/"],

@@ -12,6 +12,7 @@ const baseConfig = {
   outDir:'./dist',
 }
 const configOptions = []
+
 // All scripts are packaged to the same file
 if(buildMode === 'all'){
   baseConfig.entry = {
