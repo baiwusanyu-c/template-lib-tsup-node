@@ -32,7 +32,7 @@
   "scripts": {
     "init": "pnpm i",
     "lint:fix": "eslint . --fix",
-    "dev": "cross-env RUNTIME_ENV=development esno watch play/index.ts",
+    "dev": "pnpm run --filter @template-node-tsup/play dev",
     "build:split": "pnpm run clean && cross-env RUNTIME_ENV=production pnpm run --filter @template-node-tsup/build build:split",
     "build:all": "pnpm run clean && cross-env RUNTIME_ENV=production pnpm run --filter @template-node-tsup/build build:all",
     "prepublishOnly": "pnpm run build:all",
