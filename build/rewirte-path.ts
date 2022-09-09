@@ -11,7 +11,6 @@ import { relativeDir } from "./utils";
  * but the directory structure of the packaged product may be the same as your single-repository structure,
  * so after the packaging is completed, we Dependency paths need to be replaced
  */
-// TODO： 移动、删除、缓存
 const distDirMap = {
     '@template-node-tsup/utils':'dist/utils/index.[format]',
     '@template-node-tsup/runtime':'dist/runtime/index.[format]'
@@ -21,7 +20,7 @@ const formatList = [
     {runPath:path.resolve(process.cwd(),'dist/**/*.cjs'),format:'cjs'},
 ]
 
-const parallelTask = () =>{
+export const parallelTask = () =>{
     const parallelTaskList = []
     formatList.forEach(formatVal=>{
         parallelTaskList.push(parallel(()=>{
@@ -50,4 +49,4 @@ const parallelTask = () =>{
 
     return parallelTaskList
 }
-export default series(...parallelTask());
+

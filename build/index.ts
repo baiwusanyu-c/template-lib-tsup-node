@@ -9,7 +9,7 @@ const baseConfig = {
   clean: true,
   minify: false,
   dts: true,
-  outDir:'./dist',
+  outDir:'../dist',
 }
 const configOptions = []
 

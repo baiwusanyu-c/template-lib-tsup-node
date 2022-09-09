@@ -1,3 +1,6 @@
+import {spawn} from "child_process";
+import path from "path";
+
 export function relativeDir(relative:string, absolute:string) {
     let rela = relative.split('/');
     rela.shift();
@@ -22,4 +25,19 @@ export function relativeDir(relative:string, absolute:string) {
     }
     str += rela.join('/');
     return str;
+}
+
+export const r = (...args) => path.resolve(__dirname, '..', ...args)
+
+export const run = async command => {
+    return new Promise(resolve => {
+        const [cmd, ...args] = command.split(' ')
+        const app = spawn(cmd, args, {
+            cwd: r('./'),
+            stdio: 'inherit',
+            shell: true,
+        })
+
+        app.on('close', resolve) //
+    })
 }
