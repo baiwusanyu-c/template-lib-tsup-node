@@ -14,9 +14,9 @@
   },
   "devDependencies": {
     "@template-node-tsup/entry": "*",
-    "tsup": "^6.2.3",
     "cross-env": "^7.0.3",
     "rimraf": "^3.0.2",
-    "sucrase": "^3.21.0"
+    "sucrase": "^3.21.0",
+    "tsup": "^6.2.3"
   }
 }

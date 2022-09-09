@@ -1,20 +1,20 @@
+import * as process from 'process'
 import { defineConfig } from 'tsup'
-import * as process from "process";
 let entry = {}
 const buildMode = process.env.BUILD_MODE
 const baseConfig = {
-  entry:{},
-  external:['ora','chalk','fs-extra'],
-  format:['cjs',"esm"],
+  entry: {},
+  external: ['ora', 'chalk', 'fs-extra'],
+  format: ['cjs', 'esm'],
   clean: true,
   minify: false,
   dts: true,
-  outDir:'../dist',
+  outDir: '../dist',
 }
 const configOptions = []
 
 // All scripts are packaged to the same file
-if(buildMode === 'all'){
+if (buildMode === 'all') {
   baseConfig.entry = {
     index: '../packages/entry/index.ts',
   }
@@ -22,13 +22,13 @@ if(buildMode === 'all'){
 }
 
 // You can output packaged products according to your desired folder structure
-if(buildMode === 'split'){
+if (buildMode === 'split') {
   entry = {
     index: '../packages/entry/index.ts',
     runtime: '../packages/runtime/index.ts',
     utils: '../utils/index.ts',
   }
-  for (let entryKey in entry) {
+  for (const entryKey in entry) {
     const config = JSON.parse(JSON.stringify(baseConfig))
     config.entry = [entry[entryKey]]
     config.outDir = entryKey === 'index' ? './dist' : `./dist/${entryKey}`
